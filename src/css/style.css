@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa a fonte 'Montserrat' do Google Fonts para estilização do texto. */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+}
+
+/* Define o estilo padrão para todos os elementos: 
+   - Define box-sizing como border-box para incluir bordas e padding no cálculo do tamanho.
+   - Remove margens e paddings padrão.
+   - Remove estilos de lista e alinha verticalmente os elementos. */
+
+body {
+    background-color: #012030;
+    color: #45C4B0;
+    font-family: 'krona-one', sans-serif;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estiliza o corpo da página:
+   - Define a cor de fundo e de texto.
+   - Aplica a fonte 'krona-one'.
+   - Centraliza o conteúdo na página com flexbox. */
+
+h1 strong {
+    color: #13678A;
+}
+
+/* Altera a cor de texto de elementos <strong> dentro de <h1>. */
+
+p {
+    font-family: "Montserrat", serif;
+    color: #e3facd;
+    margin-top: 35px;
+}
+
+/* Estiliza os parágrafos:
+   - Define a fonte 'Montserrat'.
+   - Aplica uma cor clara e margem superior. */
+
+a {
+    text-decoration: none;
+    margin: 20px;
+}
+
+/* Remove o sublinhado dos links e adiciona margem. */
+
+main {
+    display: flex;
+    width: 65%;
+    max-width: 800px;
+}
+
+/* Estiliza o elemento principal:
+   - Define um layout flexível.
+   - Limita a largura do contêiner principal. */
+
+.intro {
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Estiliza a seção de introdução:
+   - Divide o espaço em 50%.
+   - Adiciona espaçamento entre elementos com gap. */
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+/* Adiciona margem superior à seção de botões. */
+
+.buttons a {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: #45C4B0;
+    color: #012030;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Estiliza os links da seção de botões:
+   - Aplica cor de fundo, bordas arredondadas e espaçamento interno.
+   - Configura uma transição suave para mudanças de cor. */
+
+.buttons a:hover {
+    background-color: #13678A;
+}
+
+/* Altera a cor de fundo ao passar o mouse sobre os links. */
+
+.image {
+    height: 93%;
+    display: inline-block;
+    border-radius: 5%;
+    border: 2px solid #45C4B0;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+/* Estiliza a seção de imagem:
+   - Define dimensões, bordas arredondadas e espaçamento interno.
+   - Aplica borda sólida e alinha o conteúdo com flexbox. */
+
+.image img {
+    width: 350px;
+    height: 100%;
+    border-radius: 5%;
+    display: block;
+    transform: translate3d(25px, 25px, 20px);
+}
+
+/* Estiliza a imagem:
+   - Define tamanho fixo e bordas arredondadas.
+   - Aplica um efeito de transformação 3D. */
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    /* Ajusta o layout principal para dispositivos menores:
+       - Altera a direção do flexbox para coluna.
+       - Reduz a largura do contêiner. */
+
+    .intro,
+    .image {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* Ajusta as larguras das seções para ocupar todo o espaço disponível. */
+
+    .image {
+        max-width: 250px;
+    }
+
+    /* Limita o tamanho da seção de imagem em telas pequenas. */
+
+    .image img {
+        max-width: 250px;
+    }
+
+    /* Reduz a largura máxima da imagem em dispositivos menores. */
+}
